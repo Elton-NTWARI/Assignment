@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio responsive website</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        [class*="pr"]{
+            padding: 1rem;
+            background-color:#00FF7F;
+            border: 2px solid black;
+            color: #00000;
+            text-align:center;
+        }
+        [class*="container"]{
+            border: 1px solid brown;
+            padding: 1rem;
+            background-color: #05aec0 ;
+         }
+       
+    </style>
+</head>
+<body>
+    <div class="pr"><h1>My Portfolio</h1></div>
+    <div class="container">
+         {% for items in work %}
+         
+         <div class="card border-info mb-3" style="max-width: 30rem;">
+            <div class="card-header">{{items.title}}</div>
+            <div class="card-body">
+              <p class="card-text">{{ items.description | truncatewords:15 }}</p>
+              <h2 class="card-text"> {{ items.technology}}</h2>
+              
+              <a href="detail.html" class="p_det"><button type="button">Know More</button> </a>
+            </div>
+          </div>
+        {% endfor %}
+        
+        <div class="about__social">
+            <a href="#" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
+            <a href="#" class="about__social-icon"><i class='bx bxl-github' ></i></a>
+            <a href="#" class="about__social-icon"><i class='bx bxl-dribbble' ></i></a>
+        </div>
+        <footer class="footer section">
+            <div class="footer__container bd-grid">
+                <div class="footer__data">
+                    <h2 class="footer__title">Elton Ntwari</h2>
+                    <p class="footer__text">I'm 16524_2020 and this is my personal website</p>
+                </div>
+
+               
+                </div>
+                
+                
+                <div>
+                    <section class="contact section" id="contact">
+                        <h2 class="section-title">Contact</h2>
+        
+                        <div class="contact__container bd-grid">
+                            <div class="contact__info">
+                                <h3 class="contact__subtitle">EMAIL</h3>
+                                <span class="contact__text">eltonntwari@gmail.com</span>
+        
+                                <h3 class="contact__subtitle">PHONE</h3>
+                                <span class="contact__text">+250 78 1877506</span>
+        
+                                <h3 class="contact__subtitle">ADRESS</h3>
+                                <span class="contact__text">Rwanda Rwamagana</span>
+                            </div>
+        
+                            
+                            
+                        </div>
+                    </section>
+                </main>
+                </div>
+                
+
+               
+            </div>
+    </div>
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" 
+integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>site</title>
+    <style>
+         .mn{
+            background-color: cadetblue;
+            color: crimson;
+         }
+         .content{
+            background-color:azure;
+            color:black;
+         }
+    </style>
+</head>
+<body>
+   <div class="mn"><h1>welcome to our new page</h1></div>
+    <div class="content">
+        {% for items in work %}
+            <div class="card border-info mb-3" style="max-width: 30rem;">
+               <h2>{{ items.title}}</h2>
+               <p>{{ items.description }}</p>
+              <h6 > {{ items.technology}}</h6>
+            </div>
+        {% endfor%}
+    </div>
+    <p>thank you!!!!</p>
+</body>
+</html>
